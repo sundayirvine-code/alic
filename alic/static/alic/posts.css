@@ -1,0 +1,134 @@
+
+body{
+    background: #181818;
+    color: #ffff;
+}
+.video{
+    border: 1px solid #ffff;
+}
+
+.container .heading{
+    font-size: 25px;
+    margin: 2em o;
+    text-transform: capitalize;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+    
+}
+.video-container{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin-top: 10px;
+}
+.video-container .video{
+    height:15rem;
+    width: 25rem;
+    margin: .2rem;
+    overflow: hidden;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, 0.5);
+}
+.video-container .video iframe{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    outline: none;
+    border: none;
+    cursor: pointer;
+}
+.sidebar ul {
+    list-style: none;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+.sidebar ul a{
+    display:block;
+    height: 100%;
+    width: 100%;
+    line-height: 35px;
+    font-size: 16px;
+    color: white;
+    padding-left: 5px;
+    box-sizing: border-box;
+    border-top: 1px solid rgba(255, 255, 255, .1);
+    border-bottom: 1px solid black;
+    transition: .4s;
+}
+.sidebar{
+    position: fixed;
+    top:o;
+    left: -250px;
+    width: 250px;
+    height: 100vh;
+    background-color: #121212;
+    height: 100%;
+    transition: all .5s ease;
+    border-right:1px solid rgba(255, 255, 255, .1) ;
+}
+.sidebar header{
+    font-size: 22px;
+    color: #ffff;
+    text-align: center;
+    line-height: 70px;
+    user-select: none;
+    
+
+}
+.sidebar ul a:hover{
+    padding-left: 30px;
+    text-decoration: none;
+}
+#check{
+    display: none;
+}
+label #btn, label #cancel {
+    position: absolute;
+    cursor: pointer;
+    border-radius: 3px;           
+}
+label #btn{
+    top: 25px;
+    left: 40px;
+    font-size: 25px;
+    color: white;
+    padding: 6px 12px;
+    transition: all .5s ease;
+
+}
+label #cancel {
+    z-index: 1111;
+    top: 20px;
+    left: -195px;
+    font-size: 25px;
+    color: #ffff;
+    padding: 4px 9px;
+    transition: all .5s ease;
+}
+#check:checked ~ .sidebar{
+   left: 0;
+}
+#check:checked ~ label #btn{
+   left: 250px;
+   opacity:0;
+   pointer-events:none;
+}
+#check:checked ~ label #cancel{
+   left: 195px;
+}
+#check:checked ~ .container{
+    margin-left: 250px;
+    
+}
+
+@media  screen and (max-width:460px) {
+    .container{
+            margin-top: 40px;
+    }
+}
+.item{
+    
+    transition: .5s ease-in-out;
+}
+.item:hover{
+    filter: brightness(80%);
+}

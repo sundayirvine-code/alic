@@ -1,0 +1,66 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}ALIC DANCE | HOME{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'alic/styles.css' %}" rel="stylesheet">
+        
+    </head>
+    <body>
+        <header class="header">
+            <nav class="navbar"> 
+                <img class="alic-logo" src="https://z-p3-scontent-mba1-1.xx.fbcdn.net/v/t1.6435-9/183312257_104205685175775_9180039440933755688_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=Ulqj_3J1QSEAX8_3VR0&_nc_ht=z-p3-scontent-mba1-1.xx&oh=7815bd75abc13a013a50e842693845c6&oe=6151DEEB">            
+                <ul class="nav-menu">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <span class="nav-link text-white" ><strong>{{ user.username }}</strong>.</span>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a href="{% url 'index' %}" class="nav-link text-white">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'index' %}#ABOUT" class="nav-link text-white">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'index' %}#services-section"  class="nav-link text-white">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'posts' %}" class="nav-link text-white">Media</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a href="https://docs.google.com/forms/d/e/1FAIpQLSdqDcljK4DiiW5YQcGYS4H_Lfi5gmPXn2fGu7MBL7-7p85gHg/viewform?usp=sf_link" class="nav-link text-white">Book Us</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a href="{% url 'index' %}#partners" class="nav-link text-white">Partners</a>
+                    </li>               
+                    <li class="nav-item">
+                        <a href="{% url 'index' %}#contact" class="nav-link text-white">Contact Us</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a href="{% url 'logout' %}" class="nav-link text-white">Logout</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+            
+            {% block header%} {% endblock%}
+        </header>
+
+            {% block body %}
+            {% endblock %}  
+            <script src="{% static 'alic/index.js' %}"></script>  
+    </body>
+</html>

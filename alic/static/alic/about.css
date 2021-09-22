@@ -1,0 +1,59 @@
+
+body{
+    background: linear-gradient(rgba(0,0,0,0.6), rgba(0,0,0,0.6)), url('https://media.istockphoto.com/photos/beauty-of-classic-ballet-ballerina-is-performing-classic-dance-picture-id859107954?k=20&m=859107954&s=612x612&w=0&h=fpfYiULtdKNTNn2XhO-yVO8z9oswAqwXiGPg9kyMYS0=');
+    min-height:100vh;
+    -webkit-background-size:cover;
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+.service-icon{
+
+width: 170px;
+height: 170px;
+
+color: #181818;
+}
+.service-icon img{
+border-radius:50%;
+margin: 0;
+margin-top: 20px;
+}
+
+
+@media  screen and (max-width:1200px) {
+.service-icon{
+margin:0;
+margin: 30px 0;
+}
+
+}
+@media  screen and (max-width:1800px) {
+.service-icon{
+margin:0;
+margin: 30px 0;
+}
+
+}
+@media  screen and (max-width:860px) {
+.service-box{
+width: 49%;
+margin-bottom: 20px;
+}
+.service-icon{
+margin:0;
+margin: 30px 0;
+}
+
+}
+@media  screen and (max-width:620px) {
+.service-box{
+width: 99%;
+margin-bottom: 20px;
+}
+.service-icon{
+margin:0;
+margin: 30px 0;
+}
+
+}

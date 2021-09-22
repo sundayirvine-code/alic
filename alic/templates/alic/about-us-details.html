@@ -1,0 +1,157 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>{% block title %}ALIC DANCE | ABOUT{% endblock %}</title>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"/>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="{% static 'alic/styles.css' %}" rel="stylesheet">
+        <link href="{% static 'alic/about.css' %}" rel="stylesheet">
+        
+    </head>
+    <body>
+
+        <header class="headerr">
+            <nav class="navbar"> 
+                <img class="alic-logo" src="https://z-p3-scontent-mba1-1.xx.fbcdn.net/v/t1.6435-9/183312257_104205685175775_9180039440933755688_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=Ulqj_3J1QSEAX8_3VR0&_nc_ht=z-p3-scontent-mba1-1.xx&oh=7815bd75abc13a013a50e842693845c6&oe=6151DEEB">            
+                <ul class="nav-menu">
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <span class="nav-link text-white" ><strong>{{ user.username }}</strong>.</span>
+                    </li>
+                    {% endif %}
+                    <li class="nav-item">
+                        <a href="{% url 'index' %}" class="nav-link text-white">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'index' %}#ABOUT" class="nav-link text-white">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'index' %}#services-section"  class="nav-link text-white">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a href="{% url 'posts' %}" class="nav-link text-white">Media</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a href="#" class="nav-link text-white">Book Us</a>
+                    </li>  
+                    <li class="nav-item">
+                        <a href="{% url 'index' %}#partners" class="nav-link text-white">Partners</a>
+                    </li>               
+                    <li class="nav-item">
+                        <a href="{% url 'index' %}#contact" class="nav-link text-white">Contact Us</a>
+                    </li>
+                    {% if user.is_authenticated %}
+                    <li class="nav-item">
+                        <a href="{% url 'logout' %}" class="nav-link text-white">Logout</a>
+                    </li>
+                    {% endif %}
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+            
+        </header>
+
+        <section id="services-section" style="background:linear-gradient(rgba(0,0,0,0), rgba(0,0,0,0)), url();">
+            <div class="services-section">
+                <div class="inner-width">
+                    <h1 class="section-title">The Team</h1>
+                    <div class="border"></div>
+                    <div class="services-container">
+        
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.6435-9/158253607_4464053496957612_7535860689275694354_n.jpg?_nc_cat=106&ccb=1-5&_nc_sid=174925&_nc_ohc=W_1W10NND1MAX8XYJ8u&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=3358b1f93dade70d200e3225cfd2b66a&oe=6154FABC" alt="" width="125">
+                            </div>
+                            <div class="service-title">Cate Dope</div>
+                            <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                        </div>
+        
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t39.30808-6/236255856_1257405078050536_3449149131500323921_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=oFyFappnDwsAX9zcbKu&_nc_oc=AQnK1_1sR4NgXc7E24f3vzj5HgfWxhKMfElja9f-uLkx39Z-URwEFFdbpwXx9hRIC5Y&tn=x9ituiQiSpBFZLf9&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=48bdb19504c1a1a77350437c81dbee44&oe=6136AE5A" alt="" width="125">
+                            </div>
+                            <div class="service-title">Iante</div>
+                            <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                        </div>
+        
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <i class="fas fa-music"></i>
+                            </div>
+                            <div class="service-title">Ogaga</div>
+                            <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                        </div>
+        
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.6435-9/69523994_1203598346478504_4750134993588584448_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=730e14&_nc_ohc=tlgX2ITE8_QAX8etVwt&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=000a473b69314072ff92ff41aa9829c4&oe=61585BDD" alt="" width="125">
+                                
+                            </div>
+                            <div class="service-title">The Anomaly</div>
+                            <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                        </div>
+        
+                        <div class="service-box">
+                            <div class="service-icon">
+                               <img src="https://cdn-icons-png.flaticon.com/128/2302/2302208.png" alt="" width='40'>
+                            </div>
+                            <div class="service-title">Holy Pete</div>
+                            <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                        </div>
+
+                        <div class="service-box">
+                            <div class="service-icon">
+                               <img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.6435-9/101866019_1113927005660681_4193607042771976192_n.jpg?_nc_cat=108&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=biOa1j6SHigAX8Q-_Zb&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=88d67c46f16362e8c30effce63e2576e&oe=61581066" alt="" width='125'>
+                            </div>
+                            <div class="service-title">Kiveli</div>
+                            <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                        </div>
+        
+                        <div class="service-box">
+                            <div class="service-icon">
+                                <img src="https://cdn-icons-png.flaticon.com/128/4968/4968575.png" alt="" width="30">
+                            </div>
+                            <div class="service-title">Nimo</div>
+                            <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                        </div>
+
+                        <div class="service-box">
+                            <div class="service-icon">
+                               <img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.6435-9/211873206_127355956194081_622255240550949236_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=a26aad&_nc_ohc=e2GZ7ePUE7oAX9_8IF2&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=000967967a93d44be12d7fd283549b1e&oe=6155BDC0" alt="" width='125'>
+                            </div>
+                            <div class="service-title">Nesh</div>
+                            <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                        </div>
+                        
+                        <div class="service-box">
+                            <div class="service-icon">
+                               <img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.6435-9/211873206_127355956194081_622255240550949236_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=a26aad&_nc_ohc=e2GZ7ePUE7oAX9_8IF2&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=000967967a93d44be12d7fd283549b1e&oe=6155BDC0" alt="" width='125'>
+                            </div>
+                            <div class="service-title">Sharon</div>
+                            <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                        </div>
+
+                        <div class="service-box">
+                            <div class="service-icon">
+                               <img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.6435-9/211873206_127355956194081_622255240550949236_n.jpg?_nc_cat=107&ccb=1-5&_nc_sid=a26aad&_nc_ohc=e2GZ7ePUE7oAX9_8IF2&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=000967967a93d44be12d7fd283549b1e&oe=6155BDC0" alt="" width='125'>
+                            </div>
+                            <div class="service-title">Hans</div>
+                            <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                        </div>
+        
+                    </div>
+                </div>
+            </div>
+        </section>
+            <script src="{% static 'alic/index.js' %}"></script>  
+    </body>
+</html>

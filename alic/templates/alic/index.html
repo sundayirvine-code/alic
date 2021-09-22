@@ -1,0 +1,229 @@
+{% extends 'alic/layout.html'%}
+{% block header %}
+<div class="hero">
+    <div class="container">
+        <h1 class="main-text text-white">ALIC DANCE MINISTRY</h1>
+        <P>A light in the cities of the world!</P>
+    </div>
+    <a href="{% url 'login' %}"  class="btn text-white btn-outline-primary">Log In</a>
+    <a href="{% url 'register' %}"  class="btn text-white btn-outline-primary">Register</a>
+</div>
+
+{% endblock %}
+{% block body %}
+<style>
+</style>
+<main>
+<section id="ABOUT">
+    <div id="#about" class="section about">
+        <div id="container contain">
+            <div class="content-section">
+                <div class="content">
+                    <div class="title"><h1>About Us</h1></div>
+                    <div>
+                        <p class="text">
+                            It has survived not only five centuries, but also the leap into electronic typesetting, remaining essentially unchanged. It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.
+                        </p>
+                        <center>
+                            <a href="{% url 'about' %}" class="btn learn text-white" >Learn More</a>
+                        </center>
+                    </div>
+                </div>
+                <div class="social">
+                    <h2>Connect with us</h2>
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                    <a href=""><i></i></a>
+                </div>
+            </div>
+            <div class="image-section">
+                <img src="https://z-p3-scontent-mba1-1.xx.fbcdn.net/v/t1.6435-9/s640x640/240960151_1796407767197556_2861936970996453124_n.jpg?_nc_cat=103&ccb=1-5&_nc_sid=730e14&_nc_ohc=Xy54770zEzAAX9kp3KK&tn=x9ituiQiSpBFZLf9&_nc_ht=z-p3-scontent-mba1-1.xx&oh=15a776a5daff6c4ca9a03b8e1974fc49&oe=6152CBBA" alt="">
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services-section">
+    <div class="services-section">
+        <div class="inner-width">
+            <h1 class="section-title">OUR SERVICES</h1>
+            <div class="border"></div>
+            <div class="services-container">
+
+                <div class="service-box">
+                    <div class="service-icon">
+                        <i class="fas fa-church"></i>
+                    </div>
+                    <div class="service-title"> Church service</div>
+                    <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/128/4306/4306077.png" alt="" width="35">
+                    </div>
+                    <div class="service-title">Events</div>
+                    <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon">
+                        <i class="fas fa-music"></i>
+                    </div>
+                    <div class="service-title">Music Videos</div>
+                    <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/512/1468/1468411.png" alt="" width="35">
+                        
+                    </div>
+                    <div class="service-title">dance Classes</div>
+                    <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon">
+                       <img src="https://cdn-icons-png.flaticon.com/128/2302/2302208.png" alt="" width='40'>
+                    </div>
+                    <div class="service-title">Trendy Styles</div>
+                    <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                </div>
+
+                <div class="service-box">
+                    <div class="service-icon">
+                        <img src="https://cdn-icons-png.flaticon.com/128/4968/4968575.png" alt="" width="30">
+                    </div>
+                    <div class="service-title">Dance Production</div>
+                    <div class="service-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Temporibus nesciunt rem quo sit labore maiores a, aspernatur id voluptate quae, earum vero eum obcaecati animi nisi ratione optio voluptatem quasi.</div>
+                </div>
+
+
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="partners">
+    <div class="client-wrap section">
+        <div class="container">
+            <h1> PARTNERS</h1>
+            <hr/>
+            <br>
+            <div class="client-in">
+                <ul>
+                    <li>
+                        <img src="https://z-p3-scontent-mba1-1.xx.fbcdn.net/v/t1.6435-9/33173090_1785913374798842_985825372459237376_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=yOqH13W-ZuMAX-We88M&_nc_oc=AQkAQNNxk64zEdky8zSIQQ_aLzXqOJS1KYUQk3vo0FEvHA2HfdC5pxydk1hCX-mjqUM&_nc_ht=z-p3-scontent-mba1-1.xx&oh=bff31f441d03fac5f5370b9bc2122e0d&oe=6154D0E2" alt="" >
+                        <img src="https://citylighters.org/storage/city_lighters.png" alt="" >
+                    </li>
+
+                    <li>
+                        <img src="http://www.ghafla.com/ke/wp-content/uploads/sites/4/2019/08/Screen-Shot-2018-09-17-at-7.49.20-AM-e1537160745790.png" alt="">
+                        <img src="https://nairobiwire.com/wp-content/uploads/2018/09/charlene.jpg" alt="">
+                    </li>
+
+                    <li>
+                        <img src="https://netstorage-tuko.akamaized.net/images/1f4ba194825ca218.jpg?imwidth=1080" alt="">
+                        <img src="https://nrg.radio/wp-content/uploads/2019/05/60809377_139321380546089_2979651273066692864_n-1024x887.jpg" alt="">
+                    </li>
+
+                    <li>
+                        <img src="https://nairobiwire.com/wp-content/uploads/2019/02/ben-cyco1.jpg" alt="">
+                        <img src="https://nairobiwire.com/wp-content/uploads/2019/02/ben.jpg" alt="">
+                    </li>
+
+                    <li>
+                        <img src="https://i.ytimg.com/vi/6CTPFE2A6cc/hqdefault.jpg?sqp=-oaymwEjCOADEI4CSFryq4qpAxUIARUAAAAAGAElAADIQj0AgKJDeAE=&rs=AOn4CLA4zMRji8SG7Ll6Tx-1lNtqsAaXBw" alt="">
+                        <img src="https://i.ytimg.com/vi/dJaunziFHtg/hqdefault.jpg" alt="">
+                    </li>
+
+                    <li>
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRNoAYD7Zlw9jS0Ljg-b21DiSSpdwe5M6UdDQ&usqp=CAU" alt="">
+                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcR-Ue5tmMs3xFCEjSxlFilpx-PHMcSeu1T1sQ&usqp=CAU" alt="">
+                    </li>
+                    <li>
+                        <img src="https://afrikalyrics.com/assets/artistes/timeless-noel.jpg" alt="">
+                        <img src="https://www.musicinafrica.net/sites/default/files/styles/article_slider_large/public/images/article/201806/2623221016662839934345816951184793962105154o.jpg?itok=xNx_OUKf" alt="">
+                    </li>
+                    <li>
+                        <img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.6435-9/125223896_2771233386422959_8165133557905430332_n.jpg?_nc_cat=100&ccb=1-5&_nc_sid=09cbfe&_nc_ohc=fJeA__olskUAX9fP7eK&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=54da62276cf7570210a91f2638f9a3ae&oe=61536DDC" alt="">
+                        <img src="https://z-p3-scontent.fmba2-1.fna.fbcdn.net/v/t1.6435-9/118675182_2702828976596734_4691833078481436240_n.jpg?_nc_cat=102&ccb=1-5&_nc_sid=8bfeb9&_nc_ohc=ohXRV62Va5IAX-ugeVq&_nc_ht=z-p3-scontent.fmba2-1.fna&oh=436d1ef52e708d889d2967a1fe83f97a&oe=61539523" alt="">
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+    <section id="contact">
+        <div class="container contact ">
+            <div class="contactinfo">
+                <div>
+                    <h2>Contact Info</h2>
+                    <ul class="info">
+                        <li>
+                            <span><i class="fa fa-map-marker" aria-hidden="true"></i></span>
+                            <span>
+                                Uchumi House, 
+                                Aga Khan Walk, 
+                                Nairobi, Kenya
+                            </span>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-envelope" aria-hidden="true"></i></span>
+                            <span>
+                               alicdanceministry@gmail.com
+                            </span>
+                        </li>
+                        <li>
+                            <span><i class="fa fa-phone" aria-hidden="true"></i></span>
+                            <span>
+                               0703176902
+                            </span>
+                        </li>
+                    </ul>
+                </div>
+                <ul>
+                    <a href="#"><i class="fa fa-facebook" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-instagram" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fa fa-youtube-play" aria-hidden="true"></i></a>
+                    <a href="#"><i class="fab fa-twitter" aria-hidden="true"></i></a>
+                </ul>
+            </div>
+            <div class="contactform">
+                <h2>Talk to us</h2>
+                <form action="{% url 'message' %}" method="post" id="contactform">
+                    {% csrf_token %}
+                    <div class="formbox">
+                        <div class="inputbox w50">
+                            <input required autocomplete="off" type="text" name="fname" id="fname">
+                            <span>First Name</span>
+                        </div>
+                        <div class="inputbox w50">
+                            <input required autocomplete="off" type="text" name="lname" id="lname">
+                            <span>Last Name</span>
+                        </div>
+                        <div class="inputbox w50">
+                            <input type="email" required autocomplete="off" name="from_email" id="from_email">
+                            <span>Email Address</span>
+                        </div>
+                        <div class="inputbox w50">
+                            <input type="text" required autocomplete="off" name="subject" id="subject">
+                            <span>Subject</span>
+                        </div>
+                        <div class="inputbox w100">
+                           <textarea required autocomplete="off" type="text" name="message" id="message"></textarea>
+                            <span>Write yor message here...</span>
+                        </div>
+                        <div class="inputbox w100 ">
+                            <input type="submit" value="send">
+                        </div>
+                </div>
+                </form>
+            </div>
+        </div>
+    </section>
+</main>
+{% endblock %}
